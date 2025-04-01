@@ -20,9 +20,9 @@ public class CrudDemoApplication {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
 //            createStudent(studentDAO);
-            createMultipleStudents(studentDAO);
+//            createMultipleStudents(studentDAO);
 //            readStudent(studentDAO);
-//            queryForStudents(studentDAO);
+            fetchStudent(studentDAO);
 //            queryForStudentsByLastName(studentDAO);
 //            updateStudent(studentDAO);
 //            deleteStudent(studentDAO);
@@ -73,7 +73,7 @@ public class CrudDemoApplication {
 
     }
 
-    private void queryForStudents(StudentDAO studentDAO) {
+    private void fetchStudent(StudentDAO studentDAO) {
 
         //get list of Students
         List<Student> theStudents = studentDAO.findAll();
